@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAMDev</title>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tailwind.config.js"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-color-backone text-color-primary">
+    <aside
+        class="fixed top-0 left-0 h-screen w-16 bg-color-backtwo text-white flex flex-col items-center py-4 space-y-6">
+        <a href="#about" data-section="about" class="nav-link hover:text-indigo-300" aria-label="Sobre mí">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.121 17.804A13.937 13.937 0 0112 15c2.21 0 4.29.534 6.121 1.476M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+        </a>
+        <a href="#skills" data-section="skills" class="nav-link hover:text-indigo-300" aria-label="Habilidades">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h4v12H4V6zm6 4h4v8h-4v-8zm6-6h4v14h-4V4z" />
+            </svg>
+        </a>
+        <a href="#projects" data-section="projects" class="nav-link hover:text-indigo-300" aria-label="Proyectos">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+            </svg>
+        </a>
+        <a href="#services" data-section="services" class=" nav-link hover:text-indigo-300 nav-link" aria-label="Servicios">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 4h16v12H4V4zm8 14h4m-8 0h4M12 8v2m0 4h.01" />
+            </svg>
+        </a>
+        <a href="#contact" data-section="contact" class=" nav-link hover:text-indigo-300 nav-link" aria-label="Contacto">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.8-4.2A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            </svg>
+        </a>
+    </aside>
+
+    <main class="ml-16 px-6 py-10 space-y-20">
+        <!-- Hero Section -->
+        <section id="about" class="bg-bg-darkest py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-12">
+                    <div class="lg:w-1/2 space-y-6 animate-fade-in">
+                        <h1 class="text-color-primary text-4xl md:text-5xl font-bold">
+                            ¡Hola! Soy <span class="text-color-primary text-bg-accent">Jason Madrid</span>
+                        </h1>
+                        <h2 class="text-2xl md:text-3xl font-semibold text-color-primary">
+                            <span class="typing-text">Desarrollador Fullstack Junior</span>
+                        </h2>
+                        <p class="text-lg text-color-primary">
+                            Apasionado por crear soluciones web innovadoras y aprender nuevas tecnologías cada día.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects"
+                                class="bg-color-btn hover:bg-color-hover text-white px-6 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-bg-btn-link">
+                                Ver Proyectos
+                            </a>
+                            <a href="#contact"
+                                class="bg-color-btn hover:bg-color-hover border text-white px-6 py-3 rounded-lg hover:text-bg-darkest transition">
+                                Contáctame
+                            </a>
+                        </div>
+                        <div class="flex gap-4 mt-6 text-2xl">
+                            <a href="#" title="GitHub" class="hover:text-bg-accent"><i class="fab fa-github"></i></a>
+                            <a href="#" title="LinkedIn" class="hover:text-bg-accent"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="Twitter" class="hover:text-bg-accent"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email" class="hover:text-bg-accent"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 text-center animate-fade-in">
+                        <img src="assets/img/img-persona-programando.jpg" alt="Jason Madrid desarrollando"
+                            class="mx-auto rounded-lg shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mt-10 py-16 min-h-screen">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-4xl font-bold text-bg-accent text-start">My Skills</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Frontend</h3>
+                    <p class="text-gray-500 mb-4">HTML, CSS, Bootstrap, SCSS, TailwindCSS</p>
+                    <div class="flex justify-center gap-6 text-3xl text-blue-600">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-react" title="React"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Backend</h3>
+                    <p class="text-gray-500 mb-4">.NET Framework, .NET MAUI</p>
+                    <div class="flex justify-center gap-6 text-3xl text-blue-600">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Languages</h3>
+                    <p class="text-gray-500 mb-4">JavaScript, Java, C#</p>
+                    <div class="flex justify-center gap-6 text-3xl text-blue-600">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                    </div>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Databases</h3>
+                    <p class="text-gray-500 mb-4">MySQL, SQL Lite</p>
+                    <div class="flex justify-center gap-6 text-3xl text-blue-600">
+                        <i class="fab fa-html5" title="HTML5"></i>
+                        <i class="fab fa-css3-alt" title="CSS3"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mt-10 py-16 min-h-screenh">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-4xl font-bold text-bg-accent text-start">My Projects</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="w-full h-32 object-cover mb-4" src="assets/img/proyectos/Catra-Tech.png"
+                        alt="Catra-Tech">
+                    <h3 class="text-xl font-bold mb-2">Catra-Tech</h3>
+                    <p class="text-gray-600">Description of project 1.</p>
+                    <button class="mt-4 bg-color-btn text-white py-2 px-4 rounded">Live Preview</button>
+                    <button class="mt-4 bg-blue-950 text-white py-2 px-4 rounded">GitHub</button>
+                </div>
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="w-full h-32 object-cover mb-4" src="assets/img/proyectos/BftAbogados.png"
+                        alt="Bufete Abogados">
+                    <h3 class="text-xl font-bold mb-2">Bufete Abogados</h3>
+                    <p class="text-gray-600">Description of project 2.</p>
+                    <button class="mt-4 bg-color-btn text-white py-2 px-4 rounded">Live Preview</button>
+                    <button class="mt-4 bg-blue-950 text-white py-2 px-4 rounded">GitHub</button>
+                </div>
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="w-full h-32 object-cover mb-4" src="assets/img/proyectos/OnPlay.png" alt="OnPlay">
+                    <h3 class="text-xl font-bold mb-2">OnPlay</h3>
+                    <p class="text-gray-600">Description of project 3.</p>
+                    <button class="mt-4 bg-color-btn text-white py-2 px-4 rounded">Live Preview</button>
+                    <button class="mt-4 bg-blue-950 text-white py-2 px-4 rounded">GitHub</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services section -->
+        <section id="services" class="mt-10 py-16 min-h-screen">
+            <div class="text-center mb-12 animate-fade-in">
+                <h2 class="text-4xl font-bold text-bg-accent text-start">My Services</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/desarrolloweb.jpg"
+                        alt="Desarrollo Web Icono">
+                    <h3 class="text-xl font-bold mb-2">Desarrollo Web</h3>
+                    <p class="text-gray-600">Building responsive and functional websites.</p>
+                </div>
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/desarrollomovil.png"
+                        alt="Desarrollo Movil Icono">
+                    <h3 class="text-xl font-bold mb-2">Desarrollo Movil</h3>
+                    <p class="text-gray-600">Creating mobile applications for iOS and Android.</p>
+                </div>
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/diseniouiux.png"
+                        alt="Diseño UI/UX Icono">
+                    <h3 class="text-xl font-bold mb-2">Diseño UI/UX</h3>
+                    <p class="text-gray-600">Designing user-friendly interfaces and experiences.</p>
+                </div>
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
+                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/diseñoweb.png" alt="Diseño Web Icono">
+                    <h3 class="text-xl font-bold mb-2">Diseño Web</h3>
+                    <p class="text-gray-600">Designing user-friendly interfaces and experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mt-10 py-16 min-h-screen">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-bg-accent mb-4">Contact Me</h2>
+                <p class="text-white text-lg mb-8">
+                    ¿Buscas presencia en el mundo digital?<br>
+                    <span class="text-bg-btn-link font-semibold">Construyamos juntos una solución accesible, ética y
+                        profesional</span>
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="nombre" class="block text-left text-sm font-medium text-white mb-1">Nombre</label>
+                        <input type="text" id="nombre" name="nombre"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bg-accent">
+                    </div>
+                    <div>
+                        <label for="telefono"
+                            class="block text-left text-sm font-medium text-white mb-1">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bg-accent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-left text-sm font-medium text-white mb-1">Email</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com"
+                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-bg-accent">
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-color-btn text-white py-3 rounded-md hover:bg-color-hover transition focus:outline-none focus:ring-2 focus:ring-bg-btn-link">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        const observer = new IntersectionObserver((entries) => {
+            document.addEventListener("wheel", (e) => {
+    const sections = document.querySelectorAll("section");
+    let current = [...sections].findIndex(s =>
+      s.getBoundingClientRect().top >= 0 && s.getBoundingClientRect().top < window.innerHeight
+    );
+
+    if (e.deltaY > 0 && current < sections.length - 1) {
+      sections[current + 1].scrollIntoView({ behavior: "smooth" });
+    } else if (e.deltaY < 0 && current > 0) {
+      sections[current - 1].scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+            threshold: 0.6 // Ajusta según el tamaño de tus secciones
+        });
+        sections.forEach(section => observer.observe(section));
+    </script>
+
+</body>
+
+</html>
