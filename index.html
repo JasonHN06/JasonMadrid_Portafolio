@@ -10,9 +10,21 @@
     <script src="js/tailwind.config.js"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .nav-link.active {
+            color: #65c5c5 !important;
+            transform: scale(1.1);
+        }
+        
+        /* Transiciones suaves */
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<body class="bg-color-backone text-color-primary">
+<body class="bg-gradient-to-br from-purple-700 via-purple-500 to-indigo-600 text-color-primary">
+    
     <aside
         class="fixed top-0 left-0 h-screen w-16 bg-color-backtwo text-white flex flex-col items-center py-4 space-y-6">
         <a href="#about" data-section="about" class="nav-link hover:text-indigo-300" aria-label="Sobre mí">
@@ -35,7 +47,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             </svg>
         </a>
-        <a href="#services" data-section="services" class=" nav-link hover:text-indigo-300 nav-link"
+        <a href="#services" data-section="services" class="nav-link hover:text-indigo-300"
             aria-label="Servicios">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -43,7 +55,7 @@
                     d="M4 4h16v12H4V4zm8 14h4m-8 0h4M12 8v2m0 4h.01" />
             </svg>
         </a>
-        <a href="#contact" data-section="contact" class=" nav-link hover:text-indigo-300 nav-link"
+        <a href="#contact" data-section="contact" class="nav-link hover:text-indigo-300"
             aria-label="Contacto">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                 stroke="currentColor">
@@ -177,26 +189,35 @@
                 <h2 class="text-4xl font-bold text-bg-accent text-left">My Services</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
-                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
-                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/desarrolloweb.jpg"
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
+                        <img class="h-40 object-cover" src="assets/img/servicios/desarrolloweb.jpg"
                         alt="Desarrollo Web Icono">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Desarrollo Web</h3>
                     <p class="text-gray-600">Building responsive and functional websites.</p>
                 </div>
-                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
-                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/desarrollomovil.png"
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
+                        <img class="h-40 p-4 object-cover" src="assets/img/servicios/desarrollomovil.png"
                         alt="Desarrollo Movil Icono">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Desarrollo Movil</h3>
                     <p class="text-gray-600">Creating mobile applications for iOS and Android.</p>
                 </div>
-                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
-                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/diseniouiux.png"
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
+                        <img class="h-40 p-2 object-cover" src="assets/img/servicios/diseniouiux.png"
                         alt="Diseño UI/UX Icono">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Diseño UI/UX</h3>
                     <p class="text-gray-600">Designing user-friendly interfaces and experiences.</p>
                 </div>
-                <div class="text-color-btn bg-white shadow-md rounded-lg p-6">
-                    <img class="h-40 object-cover mb-4" src="assets/img/servicios/diseñoweb.png" alt="Diseño Web Icono">
+                <div class="text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                    <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
+                        <img class="h-40 p-3 object-cover" src="assets/img/servicios/diseñoweb.png"
+                        alt="Diseño Web Icono">
+                    </div>
                     <h3 class="text-xl font-bold mb-2">Diseño Web</h3>
                     <p class="text-gray-600">Designing user-friendly interfaces and experiences.</p>
                 </div>
@@ -242,13 +263,11 @@
         // Observador para resaltar navegación activa
         const sections = document.querySelectorAll("section");
         const navLinks = document.querySelectorAll(".nav-link");
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     // Remover clase active de todos los enlaces
                     navLinks.forEach(link => link.classList.remove('active'));
-
                     // Agregar clase active al enlace correspondiente
                     const activeLink = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
                     if (activeLink) {
@@ -263,22 +282,18 @@
 
         // Observar todas las secciones
         sections.forEach(section => observer.observe(section));
-
         // Scroll con rueda del mouse (opcional - navegación por secciones)
         let isScrolling = false;
 
         document.addEventListener("wheel", (e) => {
             if (isScrolling) return;
-
             e.preventDefault();
             isScrolling = true;
-
             const sections = document.querySelectorAll("section");
             const currentSection = [...sections].findIndex(section => {
                 const rect = section.getBoundingClientRect();
                 return rect.top >= -100 && rect.top < window.innerHeight / 2;
             });
-
             let targetSection = currentSection;
             if (e.deltaY > 0 && currentSection < sections.length - 1) {
                 // Scroll hacia abajo
