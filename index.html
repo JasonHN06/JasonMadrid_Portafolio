@@ -11,12 +11,10 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
         .nav-link.active {
             color: #65c2c5 !important;
             transform: scale(1.1);
         }
-
         .nav-link {
             transition: all 0.3s ease;
         }
@@ -26,40 +24,31 @@
 <body class="relative bg-gradient-to-br from-[#5b3b68] to-[#080c1a] text-color-primary">
     <div id="cursor-light" class="fixed inset-0 z-0 pointer-events-none transition-all duration-200 ease-out"></div>
 
-    <aside
-        class="fixed top-0 left-0 h-screen w-16 bg-color-backtwo bg-opacity-20 text-white flex flex-col items-center py-4 space-y-6">
+    <aside class="fixed top-0 left-0 h-screen w-16 bg-color-backtwo bg-opacity-20 text-white flex flex-col items-center py-4 space-y-6 shadow-[10px_0_15px_rgba(8,12,26,0.4)]">
         <a href="#about" data-section="about" class="nav-link" aria-label="Sobre mí">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M5.121 17.804A13.937 13.937 0 0112 15c2.21 0 4.29.534 6.121 1.476M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
         </a>
         <a href="#skills" data-section="skills" class="nav-link" aria-label="Habilidades">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 6h4v12H4V6zm6 4h4v8h-4v-8zm6-6h4v14h-4V4z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h4v12H4V6zm6 4h4v8h-4v-8zm6-6h4v14h-4V4z" />
             </svg>
         </a>
         <a href="#projects" data-section="projects" class="nav-link" aria-label="Proyectos">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
             </svg>
         </a>
         <a href="#services" data-section="services" class="nav-link" aria-label="Servicios">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M4 4h16v12H4V4zm8 14h4m-8 0h4M12 8v2m0 4h.01" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h16v12H4V4zm8 14h4m-8 0h4M12 8v2m0 4h.01" />
             </svg>
         </a>
         <a href="#contact" data-section="contact" class="nav-link" aria-label="Contacto">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.8-4.2A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.8-4.2A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
             </svg>
         </a>
     </aside>
@@ -69,15 +58,15 @@
         <section id="about" class="bg-bg-darkest py-20 min-h-screen flex items-center">
             <div class="max-w-7xl mx-auto px-6 w-full">
                 <div class="flex flex-col lg:flex-row items-center gap-12">
-                    <div class="lg:w-1/2 space-y-6 animate-fade-in">
+                    <div class="about-text lg:w-1/2 space-y-6">
                         <h1 class="text-color-primary text-4xl md:text-5xl font-bold">
                             ¡Hola! Soy <span class="text-color-primary text-bg-accent">Jason Madrid</span>
                         </h1>
                         <h2 class="text-2xl md:text-3xl font-semibold text-color-primary">
-                            <span class="typing-text">Desarrollador Fullstack Junior</span>
+                            <span class="typing-text">Desarrollador Web Jr.</span>
                         </h2>
                         <p class="text-lg text-color-primary">
-                            Apasionado por crear soluciones web innovadoras y aprender nuevas tecnologías cada día.
+                            Apasionado por crear soluciones web accesibles e innovadoras.<br>Me gusta aprender nuevas tecnologías cada día.
                         </p>
                         <div class="flex flex-wrap gap-4">
                             <a href="#projects"
@@ -94,12 +83,12 @@
                             <a href="#" title="LinkedIn" class="hover:text-bg-accent"><i
                                     class="fab fa-linkedin"></i></a>
                             <a href="#" title="Twitter" class="hover:text-bg-accent"><i class="fab fa-twitter"></i></a>
-                            <a href="#" title="Email" class="hover:text-bg-accent"><i class="fas fa-envelope"></i></a>
+                            <a href="#" title="Email" class="hover:text-bg-accent hover:text-[#ff0000] transition duration-200"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
-                    <div class="lg:w-1/2 text-center animate-fade-in">
-                        <img src="assets/img/img-persona-programando.jpg" alt="Jason Madrid desarrollando"
-                            class="mx-auto rounded-lg shadow-lg w-full max-w-md">
+                    <div class="about-img lg:w-1/2 text-center">
+                        <img src="assets/img/img-perfil-jamf.png" alt="Imagen de Jason Madrid"
+                            class="mx-auto rounded-full w-full max-w-md lg:w-2/3 lg:max-w-sm grayscale-50 hover:grayscale transition duration-500">
                     </div>
                 </div>
             </div>
@@ -201,37 +190,37 @@
                 <h2 class="text-4xl font-bold text-bg-accent text-left">My Services</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-                <div class="card-section text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                <div class="card-service text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
                     <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
-                        <img class="h-40 object-cover" src="assets/img/servicios/desarrolloweb.jpg"
-                            alt="Desarrollo Web Icono">
+                        <img class="hover:animate-jiggle h-40 object-cover" src="assets/img/servicios/desarrolloweb.jpg"
+                            alt="Icono Desarrollo Web">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Desarrollo Web</h3>
                     <p class="text-gray-600">Construcción de sitios web funcionales y adaptados a estándares modernos,
                         priorizando la experiencia del usuario y accesibilidad.</p>
                 </div>
-                <div class="card-section text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                <div class="card-service text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
                     <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
-                        <img class="h-40 p-4 object-cover" src="assets/img/servicios/desarrollomovil.png"
-                            alt="Desarrollo Movil Icono">
+                        <img class="hover:animate-jiggle h-40 p-4 object-cover"
+                            src="assets/img/servicios/desarrollomovil.png" alt="Icono Desarrollo Movil">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Desarrollo Movil</h3>
-                    <p class="text-gray-600 text-justify">Creación de apps móviles con .NET MAUI para iOS y Android,
+                    <p class="text-gray-600">Creación de apps móviles con .NET MAUI para iOS y Android,
                         enfocadas en la compatibilidad multiplaforma. Garantizando un rendimiento óptimo.</p>
                 </div>
-                <div class="card-section text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                <div class="card-service text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
                     <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
-                        <img class="h-40 p-2 object-cover" src="assets/img/servicios/diseniouiux.png"
-                            alt="Diseño UI/UX Icono">
+                        <img class="hover:animate-jiggle h-40 p-2 object-cover"
+                            src="assets/img/servicios/diseniouiux.png" alt="Icono Diseño UI/UX">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Diseño UI/UX</h3>
                     <p class="text-gray-600">Diseño de interfaces accesibles y centradas en el usuario, para la creación
                         de productos digitales confiables, garantizando una experiencia intuitiva.</p>
                 </div>
-                <div class="card-section text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
+                <div class="card-service text-color-btn bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition">
                     <div class="h-40 bg-gray-200 mb-4 rounded flex items-center justify-center">
-                        <img class="h-40 p-3 object-cover" src="assets/img/servicios/diseñoweb.png"
-                            alt="Diseño Web Icono">
+                        <img class="hover:animate-jiggle h-40 p-3 object-cover" src="assets/img/servicios/diseñoweb.png"
+                            alt="Icono Diseño Web">
                     </div>
                     <h3 class="text-xl font-bold mb-2">Diseño Web</h3>
                     <p class="text-gray-600">Desarrollo de sitios web altamente modulares, escalables y responsivos,
@@ -347,7 +336,28 @@
                 isScrolling = false;
             }, 1000);
         }, { passive: false });
+
+        // Animaciones de GSAP
+        window.addEventListener('DOMContentLoaded', () => {
+            gsap.from(".about-text", {
+                opacity: 0,
+                y: 50,
+                duration: 1,
+                ease: "power2.out"
+            });
+
+            gsap.from(".about-img", {
+                opacity: 0,
+                x: 80,
+                duration: 1,
+                ease: "power2.out",
+                delay: 0.3
+            });
+        });
+
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 </body>
 

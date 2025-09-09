@@ -10,13 +10,16 @@ tailwind.config = {
         "color-backtwo": "#5b3b68",
       },
       keyframes: {
-        fadeInUp: {
-          "0%": { opacity: "0", transform: "translateY(40px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+        jiggle: {
+          "0%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-4px)" },
+          "50%": { transform: "translateX(4px)" },
+          "75%": { transform: "translateX(-2px)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
       animation: {
-        fadeInUp: "fadeInUp 0.8s ease-out forwards",
+        jiggle: "jiggle 0.4s ease-in-out",
       },
     },
   },
