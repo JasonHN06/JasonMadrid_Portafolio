@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<!-- Icono about -->
+<symbol id="icon-about" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M5.121 17.804A13.937 13.937 0 0112 15c2.21 0 4.29.534 6.121 1.476M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+</symbol>
+<!-- Icono skills --> 
+<symbol id="icon-skills" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 6h4v12H4V6zm6 4h4v8h-4v-8zm6-6h4v14h-4V4z" />
+</symbol>
+<!-- Icono projects -->
+<symbol id="icon-projects" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
+</symbol>
+<!-- Icono services -->
+<symbol id="icon-services" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M4 4h16v12H4V4zm8 14h4m-8 0h4M12 8v2m0 4h.01" />
+</symbol>
+<!-- Icono contact -->
+<symbol id="icon-contact" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+        d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8L3 20l1.8-4.2A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+</symbol>
+
+</svg>
