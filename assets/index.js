@@ -40,14 +40,14 @@ const observer = new IntersectionObserver(
 
 // Observar todas las secciones
 sections.forEach((section) => observer.observe(section));
-// Scroll con rueda del mouse (opcional - navegación por secciones)
+// Scroll con rueda del mouse para navegar por secciones
 let isScrolling = false;
 
 document.addEventListener(
   "wheel",
   (e) => {
     if (isScrolling) return;
-    e.preventDefault();
+    e.preventDefault(); // Evitar scroll por defecto
     isScrolling = true;
     const sections = document.querySelectorAll("section");
     const currentSection = [...sections].findIndex((section) => {
@@ -69,7 +69,7 @@ document.addEventListener(
       });
     }
 
-    // Permitir nuevo scroll después de un breve delay
+    // Permitir nuevo scroll después de un delay
     setTimeout(() => {
       isScrolling = false;
     }, 1000);
@@ -77,7 +77,7 @@ document.addEventListener(
   { passive: false }
 );
 
-// Animaciones de GSAP
+// Animaciones de GSAP para la sección About 
 window.addEventListener("DOMContentLoaded", () => {
   gsap.from(".about-text", {
     opacity: 0,
@@ -99,13 +99,13 @@ window.addEventListener("DOMContentLoaded", () => {
 const typingText = document.querySelector(".typing-text");
 if (typingText) {
   const text = typingText.textContent;
-  typingText.textContent = "";
+  typingText.textContent = ""; // Limpiar texto inicial
   let i = 0;
   function typeWriter() {
     if (i < text.length) {
       typingText.textContent += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 100);
+      setTimeout(typeWriter, 100); // Escribe letra por letra con velocidad de escritura
     }
   }
   // Iniciar animación después de un pequeño delay
@@ -120,6 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          // Elimina clases de invisibilidad y aplica entrada progresiva
           skillsGrid.classList.remove("opacity-0", "translate-y-12");
           skillsGrid.classList.add("opacity-100", "translate-y-0");
         }
@@ -138,12 +139,14 @@ const observed = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        // Agrega animacion de entrada y remueve clases de invisibilidad
         entry.target.classList.add("fade-up");
         entry.target.classList.remove("opacity-0");
       }
     });
   },
   {
+    // Activa cuando el 20% de la tarjeta es visible
     threshold: 0.2,
   }
 );

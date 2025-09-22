@@ -1,12 +1,15 @@
+/* Enlace activo del menu lateral */
 .nav-link.active {
     color: #65c2c5 !important;
     transform: scale(1.1);
 }
 
+/* Transision suave del menu lateral */
 .nav-link {
     transition: all 0.3s ease;
 }
 
+/* Efecto de escritura */
 .typing-text {
     border-right: 2px solid #65c2c5;
     animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
@@ -21,6 +24,7 @@
     }
 }
 
+/* Efecto de parpadeo y color del cursor */
 @keyframes blink {
     from,
     to {
